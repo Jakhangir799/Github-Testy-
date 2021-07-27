@@ -12,12 +12,12 @@ class StudentAdapter(val list: List<StudentWithRegion>) :
     inner class Vh(var itemStudentBinding: ItemStudentBinding) :
         RecyclerView.ViewHolder(itemStudentBinding.root) {
 
-        fun onBind(studentWithRegion: StudentWithRegion) {
-            itemStudentBinding.apply {
-                nameTv.text = studentWithRegion.student.name
-                regionTv.text = studentWithRegion.region.name
-            }
-        }
+//        fun onBind(studentWithRegion: StudentWithRegion) {
+//            itemStudentBinding.apply {
+//                nameTv.text = studentWithRegion.student.name
+//                regionTv.text = studentWithRegion.region.name
+//            }
+//        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Vh {
@@ -25,7 +25,7 @@ class StudentAdapter(val list: List<StudentWithRegion>) :
     }
 
     override fun onBindViewHolder(holder: Vh, position: Int) {
-        holder.onBind(list[position])
+//        holder.onBind(list[position])
     }
 
     override fun getItemCount(): Int = list.size

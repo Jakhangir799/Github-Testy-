@@ -13,8 +13,8 @@ interface StudentDao {
     @Insert
     fun addStudent(student: Student)
 
-    @Query("select * from student")
-    fun getAllStudents(): List<Student>
+//    @Query("select * from student")
+//    fun getAllStudents(): List<Student>
 
     @Transaction
     @Query("select * from student")
