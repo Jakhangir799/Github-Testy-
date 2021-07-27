@@ -25,10 +25,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         appDatabase = AppDatabase.getInstance(this)
-//        appDatabase.regionDao().addRegion(Region(name = "Toshkent"))
-//        appDatabase.regionDao().addRegion(Region(name = "Navoiy"))
-//        appDatabase.regionDao().addRegion(Region(name = "Samarqand"))
-//        appDatabase.regionDao().addRegion(Region(name = "Buxoro"))
         regionList = ArrayList(appDatabase.regionDao().getAllRegions())
         regionAdapter = RegionAdapter(regionList)
 
